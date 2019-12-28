@@ -14,7 +14,7 @@ public class MarsRoverTest {
 		Rover rover = new Rover();
 		rover.land(area, 5, 5, Rover.EAST);
 		String position = rover.getPosition();
-		assertThat(position).isEqualTo("10E");
+		assertThat(position).isEqualTo("55E");
 	}
 	
 	@Test
@@ -24,7 +24,7 @@ public class MarsRoverTest {
 		rover.land(area, 5, 5, "E");
 		rover.move();
 		String position = rover.getPosition();
-		assertThat(position).isEqualTo("11E");
+		assertThat(position).isEqualTo("65E");
 	}
 	
 	@Test
@@ -33,7 +33,7 @@ public class MarsRoverTest {
 		RoverController roverController = new RoverController(rover);
 		String mission = "10,10,5,5,E,M,L,M,R";
 		String position = roverController.execute(mission);
-		assertThat(position).isEqualTo("12E");
+		assertThat(position).isEqualTo("66E");
 	}
 	
 	@Test
